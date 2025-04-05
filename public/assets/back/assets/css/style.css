@@ -619,5 +619,40 @@ body{
     .content main .bottom-data .reminders .task-list{
         min-width: 340px;
     }
+}
 
+/* Estilos para el Dropdown */
+.sidebar .dropdown {
+    position: relative;
+}
+
+/* Botón del Dropdown */
+.sidebar .dropdown .dropdown-toggle {
+    margin-left: auto;
+    cursor: pointer; /* Añadir cursor pointer para indicar que es clicable */
+}
+
+/* Contenido del Dropdown */
+.sidebar .dropdown .dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+/* Mostrar el Dropdown cuando está activo */
+.sidebar .dropdown.show .dropdown-menu {
+    display: block; /* Mostrar cuando está activo */
 }

@@ -54,3 +54,16 @@ toggler.addEventListener('change', function () {
         document.body.classList.remove('dark');
     }
 });
+
+// Dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el enlace navegue
+            var dropdown = this.parentElement;
+            dropdown.classList.toggle('show');
+        });
+    });
+});

@@ -34,4 +34,8 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('user', [BackController::class, ('index')]);
 });
 
+Route::prefix('admin')->group(function () {
+    
+});
+
 require __DIR__.'/auth.php';

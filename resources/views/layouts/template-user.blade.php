@@ -11,31 +11,37 @@
 
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <a href="#" class="logo" id="logo">
-
-            <i class='bx bx-check'></i>
-            <div class="logo-name"><span>TES-</span>LTDA</div>
-        </a>
-        <ul class="side-menu">
-            <li><a href="#"><i class='bx bxs-dashboard'></i>Panel</a></li>
-            <li><a href="{{route('tickets')}}"><i class='bx bx-message-square-dots'></i>Tickets</a></li>
-            <li><a href="#"><i class='bx bx-group'></i>Usuarios</a></li>
-        </ul>
-        <ul class="side-menu">
-            <li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-                <a href="#" class="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class='bx bx-log-out-circle'></i>
-                    Cerrar Sesión
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- End of Sidebar -->
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="#" class="logo" id="logo">
+        <i class='bx bx-check'></i>
+        <div class="logo-name"><span>TES-</span>LTDA</div>
+    </a>
+    <ul class="side-menu">
+        <li><a href="#"><i class='bx bxs-dashboard'></i>Panel</a></li>
+        <li><a href="{{route('tickets')}}"><i class='bx bx-message-square-dots'></i>Tickets</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle"><i class='bx bx-cog'></i>Configuración <i class='bx bx-chevron-down'></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class='bx bx-user'></i>Usuarios</a></li>
+                <li><a href="#"><i class='bx bx-shield'></i>Roles</a></li>
+                <li><a href="#"><i class='bx bx-lock'></i>Permisos</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="side-menu">
+        <li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            <a href="#" class="logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class='bx bx-log-out-circle'></i>
+                Cerrar Sesión
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- End of Sidebar -->
 
     <!-- Main Content -->
     <div class="content">
@@ -68,6 +74,5 @@
     </div>
 
     <script src="{{ asset('/assets/back/assets/js/index.js') }}"></script>
-</body>
 
 </html>
